@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Followers Analyzer</title>
+    <meta name="description" content="Descubrí quién no te sigue en Instagram de forma segura y privada.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HERO -->
+    <section class="hero d-flex align-items-center justify-content-center flex-column">
+        <h1 class="hero-title">Instagram Analyzer</h1>
+        <p class="hero-subtitle">Subí tu archivo de Instagram y descubrí quién no te sigue.</p>
+        <a href="#subir" class="btn btn-outline-light btn-lg mt-4">🚀 Empezar análisis</a>
+    </section>
+
+    <div class="container my-5">
+
+        <!-- INSTRUCCIONES -->
+        <div class="card p-5 shadow-sm mb-5">
+            <h2 class="section-title mb-4 text-dark">📝 ¿Cómo descargar tu información?</h2>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h4>Desde el celular 📱</h4>
+                    <ol class="list-instrucciones">
+                        <li>Abrí Instagram → Perfil → ☰ → Configuración.</li>
+                        <li>Entrá a Centro de cuentas → Tu información y permisos.</li>
+                        <li>Seleccioná Descargar tu información.</li>
+                        <li>Elegí tu cuenta y solicitá la descarga.</li>
+                        <li>Esperá el mail de descarga y bajá el archivo ZIP.</li>
+                    </ol>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h4>Desde la computadora 💻</h4>
+                    <ol class="list-instrucciones">
+                        <li>Ingresá a <a href="https://accountscenter.instagram.com/" target="_blank">accountscenter.instagram.com</a>.</li>
+                        <li>Accedé a Tu información y permisos.</li>
+                        <li>Pedí tu descarga completa.</li>
+                        <li>Esperá el correo y descargá tu archivo ZIP.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- FORMULARIO -->
+        <div class="card p-5 shadow-sm" id="subir">
+            <h2 class="section-title text-dark mb-4">📂 Subí tu archivo ZIP</h2>
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <input class="form-control" type="file" name="file" id="file" accept=".zip" required>
+                </div>
+                <button class="btn btn-dark w-100 btn-lg" type="submit">🔍 Analizar archivo</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2025 Instagram Analyzer. Hecho con pasión y foco en tu privacidad.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
