@@ -1,0 +1,81 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  background: linear-gradient(135deg, #343a40, #212529);
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+/* Botones */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light {
+  border: 2px solid white;
+  color: white;
+}
+
+.btn-outline-light:hover {
+  background-color: white;
+  color: #212529;
+}
+
+.btn-dark {
+  background-color: #212529;
+  border: none;
+}
+
+.btn-dark:hover {
+  background-color: #0d0d0d;
+}
+
+/* Cards */
+.card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+.footer {
+  background-color: #212529;
+  padding: 20px 0;
+  color: #adb5bd;
+  font-size: 0.9rem;
+  text-align: center;
+}
