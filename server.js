@@ -47,10 +47,10 @@ app.post('/upload', upload.single('file'), async (req, res) => {
     const extension = path.extname(req.file.originalname).toLowerCase();
     if (extension !== '.zip') {
         fs.unlinkSync(req.file.path);
-        return res.status(400).send('<h2 style="color:red;">⚠️ Error: Solo se permiten archivos .ZIP de Instagram.</h2><a href="/">Volver al inicio</a>');
+        return res.status(400).send('<h2 style="color:red;">⚠ Error: Solo se permiten archivos .ZIP de Instagram.</h2><a href="/">Volver al inicio</a>');
     }
 
-    const tempFolder = `uploads/${Date.now()}`;
+    const tempFolder = uploads/${Date.now()};
     const tempZipPath = req.file.path;
 
     try {
@@ -82,14 +82,14 @@ app.post('/upload', upload.single('file'), async (req, res) => {
                     <div class="card p-5 shadow">
                         <h2 class="text-success mb-3">🎉 ¡Todo en orden!</h2>
                         <p class="text-muted">No encontramos ninguna cuenta que no te siga de vuelta. ¡Excelente!</p>
-                        <a href="/" class="btn btn-dark mt-4">⬅️ Volver al inicio</a>
+                        <a href="/" class="btn btn-dark mt-4">⬅ Volver al inicio</a>
                     </div>
                 </div>
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
             `);
         } else {
-            const fileName = `results/resultado-${Date.now()}.txt`;
-            fs.writeFileSync(fileName, noMeSiguen.map(user => `@${user}`).join('\n'));
+            const fileName = results/resultado-${Date.now()}.txt;
+            fs.writeFileSync(fileName, noMeSiguen.map(user => @${user}).join('\n'));
 
             res.send(`
                 <div class="container" style="max-width: 700px; margin: 50px auto; text-align: center;">
@@ -97,10 +97,10 @@ app.post('/upload', upload.single('file'), async (req, res) => {
                         <h2 class="text-danger mb-3">👥 ${noMeSiguen.length} personas no te siguen:</h2>
                         <p class="text-muted">Te mostramos la lista completa a continuación:</p>
                         <ul class="list-group list-group-flush my-4">
-                            ${noMeSiguen.map(user => `<li class="list-group-item">@${user}</li>`).join('')}
+                            ${noMeSiguen.map(user => <li class="list-group-item">@${user}</li>).join('')}
                         </ul>
                         <a href="/${fileName}" download class="btn btn-dark mt-4">📥 Descargar lista en .txt</a><br><br>
-                        <a href="/" class="btn btn-secondary">⬅️ Volver al inicio</a>
+                        <a href="/" class="btn btn-secondary">⬅ Volver al inicio</a>
                     </div>
                 </div>
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -118,6 +118,6 @@ app.post('/upload', upload.single('file'), async (req, res) => {
 });
 
 // Iniciar servidor
-app.listen(3000, () => {
-    console.log(`🚀 Servidor corriendo en http://localhost:3000`);
+app.listen(port, () => {
+    console.log(🚀 Servidor corriendo en http://localhost:${port});
 });
